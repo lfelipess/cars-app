@@ -1,0 +1,16 @@
+<div>
+    <h2>Bem vindo {{user.firstName}} {{user.lastName}}</h2>
+    <h4>Escolha o que deseja fazer:</h4>
+    <ul>
+        <li>
+            <a (click)="listCars()">Listar seus carros</a>
+        </li>
+        <li>
+            <a (click)="editUser(user.uuid)">Editar seu cadastro</a>
+        </li>
+        <li>
+            <a (click)="deleteUser(user.uuid)">Deletar seu cadastro</a>
+        </li>
+    </ul>
+    <p><a [routerLink]="['/login']">Logout</a></p>
+</div>

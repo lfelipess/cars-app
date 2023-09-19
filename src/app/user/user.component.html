@@ -1,0 +1,45 @@
+<div class="col-md-6 col-md-offset-3">
+    <h2>Edite seus dados</h2>
+    <form name="form" (ngSubmit)="f.form.valid && editUser()" #f="ngForm" novalidate>
+        <div class="form-group">
+            <label for="firstName">Primeiro nome</label>
+            <input type="text" class="form-control" name="firstName" [(ngModel)]="user.firstName" #firstName="ngModel" required />
+            <div *ngIf="f.submitted && !firstName.valid" class="help-block">Primeiro nome é obrigatório</div>
+        </div>
+
+        <div class="form-group">
+            <label for="lastName">Sobrenome</label>
+            <input type="text" class="form-control" name="lastName" [(ngModel)]="user.lastName" #lastName="ngModel" required />
+            <div *ngIf="f.submitted && !lastName.valid" class="help-block">Sobrenome é obrigatório</div>
+        </div>
+
+        <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="email" class="form-control" name="email" [(ngModel)]="user.email" #email="ngModel" required />
+            <div *ngIf="f.submitted && !email.valid" class="help-block">E-mail é obrigatório</div>
+        </div>
+
+        <div class="form-group">
+            <label for="birthday">Data de nascimento</label>
+            <input type="date" class="form-control" name="birthday" [(ngModel)]="user.birthday" #birthday="ngModel" required />
+            <div *ngIf="f.submitted && !birthday.valid" class="help-block">Data de nascimento é obrigatório</div>
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Telefone</label>
+            <input type="text" class="form-control" name="phone" [(ngModel)]="user.phone" #phone="ngModel" required />
+            <div *ngIf="f.submitted && !birthday.valid" class="help-block">Telefone é obrigatório</div>
+        </div>
+
+        <div class="form-group">
+            <label for="login">Usuário</label>
+            <input type="text" class="form-control" name="login" [(ngModel)]="user.login" #login="ngModel" required />
+            <div *ngIf="f.submitted && !login.valid" class="help-block">Usuário é obrigatório</div>
+        </div>
+
+        <div class="form-group">
+            <button class="btn btn-primary">Editar</button>
+            <a [routerLink]="['']" class="btn btn-link">Voltar</a>
+        </div>
+    </form>
+</div>

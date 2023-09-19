@@ -1,0 +1,33 @@
+<div class="col-md-6 col-md-offset-3">
+    <h2>{{label}}</h2>
+    <form name="form" (ngSubmit)="f.form.valid && addCar()" #f="ngForm" novalidate>
+        <div class="form-group">
+            <label for="year">Ano</label>
+            <input type="number" class="form-control" name="year" [(ngModel)]="car.year" #year="ngModel" required />
+            <div *ngIf="f.submitted && !year.valid" class="help-block">Ano é obrigatório</div>
+        </div>
+
+        <div class="form-group">
+            <label for="licensePlate">Placa</label>
+            <input type="text" class="form-control" name="licensePlate" [(ngModel)]="car.licensePlate" #licensePlate="ngModel" required />
+            <div *ngIf="f.submitted && !licensePlate.valid" class="help-block">Placa é obrigatório</div>
+        </div>
+
+        <div class="form-group">
+            <label for="model">Modelo</label>
+            <input type="text" class="form-control" name="model" [(ngModel)]="car.model" #model="ngModel" required />
+            <div *ngIf="f.submitted && !model.valid" class="help-block">Modelo é obrigatório</div>
+        </div>
+
+        <div class="form-group">
+            <label for="color">Cor</label>
+            <input type="text" class="form-control" name="color" [(ngModel)]="car.color" #color="ngModel" required />
+            <div *ngIf="f.submitted && !color.valid" class="help-block">Cor é obrigatório</div>
+        </div>
+
+        <div class="form-group">
+            <button class="btn btn-primary">{{label}}</button>
+            <a [routerLink]="['/cars']" class="btn btn-link">Voltar</a>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,12 @@
+<div>
+    <h4>Lista de carros</h4>
+    <ul>
+        <li *ngFor="let car of cars">
+            {{car.year}} {{car.licensePlate}} {{car.model}} {{car.color}} <button (click)="carDetails(car.uuid)">Editar</button><button (click)="deleteCar(car.uuid)">Apagar</button>
+        </li>
+    </ul>
+</div>
+<div>
+    <button [routerLink]="['/car']">Adicionar Carro</button>
+    <a [routerLink]="['/']" class="btn btn-link">Voltar</a>
+</div>
