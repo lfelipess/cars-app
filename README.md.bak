@@ -11,8 +11,8 @@ Esta aplicação realiza a criação de usuários com base nos dados de uma pess
 - [US6] - Criação de componente de cadastro de carros
 - [US7] - Criação de componente de edição de usuarios
 - [US8] - Criação de componente de edição de carros  
-- [US9] - Configuração do JWT Token e service de Authenticação
-- [US10] - Configuração e criação de exceções
+- [US5] - Configuração do JWT Token e service de Authenticação
+- [US6] - Configuração e criação de exceções
 
 ## Solução
 
